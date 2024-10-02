@@ -14,7 +14,9 @@ A=2
 T=1
 RC=0.001
 label="$ {}\\times u(t-{})$".format(A,T) 
-[line] = ax2.plot(t,(u(t)-(r(t)**2)+(2*(r(t-0.5))**2)-(r(t-1)**2)-u(t-4)+(r(t-4)**2)-(2*(r(t-4.5))**2)+(r(t-5))**2),label=label)
+[line] = ax2.plot(t,((r(t)**2)-(2*r(t-0.5)**2)+(r(t-1)**2)-(r(t-4)**2)+(2*r(t-4.5)**2)-(r(t-5)**2)),label=label)
+[line] = ax2.plot(t,(u(t)-(r(t)**2)+(2*r(t-0.5)**2)-(r(t-1)**2)-u(t-4)+(r(t-4)**2)-(2*r(t-4.5)**2)+(r(t-5)**2)),label=label)
+#[line] = ax2.plot(t,((r(t))-(2*r(t-0.5))+(r(t-1))-(r(t-4))+(2*r(t-4.5))-(r(t-5))),label=label)
 #[line] = ax2.plot(t,(u(t)-r(t)+2*r(t-0.5)),label=label)
 
 ax2.set_xlabel('Time [s]',fontsize=12)
